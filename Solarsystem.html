@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Solar System</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0d17;
+            color: #f0f2f5;
+            line-height: 1.6;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(11,13,23,1));
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid #1e233d;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        header p {
+            color: #a0a5c0;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        nav a {
+            color: #4fc3f7;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #4fc3f7;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #4fc3f7;
+            color: #0b0d17;
+            box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-size: 1.8rem;
+            color: #ffffff;
+            border-left: 4px solid #4fc3f7;
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+
+        /* Planet Grid and Cards */
+        .planet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+        .planet-card {
+            background-color: #16192b;
+            border: 1px solid #232844;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            scroll-margin-top: 20px; /* Helps when clicking nav links */
+        }
+        .planet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border-color: #4fc3f7;
+        }
+        .planet-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        .planet-type {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4fc3f7;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .planet-card p {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+        .stats-list {
+            list-style: none;
+            border-top: 1px solid #232844;
+            padding-top: 15px;
+            font-size: 0.85rem;
+        }
+        .stats-list li {
+            margin-bottom: 6px;
+            color: #94a3b8;
+        }
+        .stats-list strong {
+            color: #e2e8f0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            background-color: #07080e;
+            border-top: 1px solid #1e233d;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Solar System</h1>
+        <p>An overview of the eight major planets orbiting our Sun</p>
+        <nav>
+            <a href="#mercury">Mercury</a>
+            <a href="#venus">Venus</a>
+            <a href="#earth">Earth</a>
+            <a href="#mars">Mars</a>
+            <a href="#jupiter">Jupiter</a>
+            <a href="#saturn">Saturn</a>
+            <a href="#uranus">Uranus</a>
+            <a href="#neptune">Neptune</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Terrestrial Planets -->
+        <h2 class="section-title">The Inner Planets (Terrestrial)</h2>
+        <div class="planet-grid">
+            
+            <!-- Mercury -->
+            <article class="planet-card" id="mercury">
+                <h3>Mercury</h3>
+                <div class="planet-type">Terrestrial Planet</div>
+                <p>The smallest and closest planet to the Sun. It experiences extreme temperature swings from scorching hot days to freezing nights due to its lack of atmosphere.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 0.39 AU</li>
+                    <li><strong>Moons:</strong> 0</li>
+                    <li><strong>Year Length:</strong> 88 Earth days</li>
+                </ul>
+            </article>
+
+            <!-- Venus -->
+            <article class="planet-card" id="venus">
+                <h3>Venus</h3>
+                <div class="planet-type">Terrestrial Planet</div>
+                <p>Earth's twin in size, but covered in a thick, toxic atmosphere of carbon dioxide. This traps heat, making it the hottest planet in our solar system.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 0.72 AU</li>
+                    <li><strong>Moons:</strong> 0</li>
+                    <li><strong>Year Length:</strong> 225 Earth days</li>
+                </ul>
+            </article>
+
+            <!-- Earth -->
+            <article class="planet-card" id="earth">
+                <h3>Earth</h3>
+                <div class="planet-type">Terrestrial Planet</div>
+                <p>Our home planet and the only known world capable of supporting life. Its surface is unique for containing liquid water and a vibrant atmosphere.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 1.00 AU</li>
+                    <li><strong>Moons:</strong> 1</li>
+                    <li><strong>Year Length:</strong> 365.25 days</li>
+                </ul>
+            </article>
+
+            <!-- Mars -->
+            <article class="planet-card" id="mars">
+                <h3>Mars</h3>
+                <div class="planet-type">Terrestrial Planet</div>
+                <p>Known as the "Red Planet" due to iron oxide (rust) on its surface. It features massive volcanoes, deep canyons, and thin atmospheric layers.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 1.52 AU</li>
+                    <li><strong>Moons:</strong> 2</li>
+                    <li><strong>Year Length:</strong> 687 Earth days</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <!-- Gas & Ice Giants -->
+        <h2 class="section-title">The Outer Planets (Giants)</h2>
+        <div class="planet-grid">
+
+            <!-- Jupiter -->
+            <article class="planet-card" id="jupiter">
+                <h3>Jupiter</h3>
+                <div class="planet-type">Gas Giant</div>
+                <p>The largest planet in our solar system. It is a massive ball of hydrogen and helium, famous for its Great Red Spot—a storm larger than Earth raging for centuries.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 5.20 AU</li>
+                    <li><strong>Moons:</strong> 95 confirmed</li>
+                    <li><strong>Year Length:</strong> 12 Earth years</li>
+                </ul>
+            </article>
+
+            <!-- Saturn -->
+            <article class="planet-card" id="saturn">
+                <h3>Saturn</h3>
+                <div class="planet-type">Gas Giant</div>
+                <p>The second-largest planet, world-renowned for its extensive, spectacular ring system made of billions of ice particles, rocky debris, and dust.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 9.58 AU</li>
+                    <li><strong>Moons:</strong> 146 confirmed</li>
+                    <li><strong>Year Length:</strong> 29 Earth years</li>
+                </ul>
+            </article>
+
+            <!-- Uranus -->
+            <article class="planet-card" id="uranus">
+                <h3>Uranus</h3>
+                <div class="planet-type">Ice Giant</div>
+                <p>An ice giant with a unique pale cyan hue caused by atmospheric methane. It is highly unusual because it rotates completely on its side.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 19.22 AU</li>
+                    <li><strong>Moons:</strong> 28 confirmed</li>
+                    <li><strong>Year Length:</strong> 84 Earth years</li>
+                </ul>
+            </article>
+
+            <!-- Neptune -->
+            <article class="planet-card" id="neptune">
+                <h3>Neptune</h3>
+                <div class="planet-type">Ice Giant</div>
+                <p>The most distant planet from our Sun. It is a deep blue, freezing ice giant that experiences supersonic winds, the strongest recorded in the solar system.</p>
+                <ul class="stats-list">
+                    <li><strong>Distance from Sun:</strong> 30.05 AU</li>
+                    <li><strong>Moons:</strong> 16 confirmed</li>
+                    <li><strong>Year Length:</strong> 165 Earth years</li>
+                </ul>
+            </article>
+
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2024 Solar System Overview. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+    </footer>
